@@ -1,0 +1,30 @@
+export const bank = [
+  { label: "Savings", value: "savings" },
+  { label: "Checking", value: "checking" },
+  { label: "Current", value: "current" },
+  { label: "Business", value: "business" },
+  { label: "Fixed Deposit", value: "fixed deposit" },
+  { label: "Joint Account", value: "joint account" },
+  { label: "Other", value: "other" },
+];
+
+export const cuisineTypes = [
+  { label: "Breakfast", value: "breakfast" },
+  { label: "Mexican", value: "mexican" },
+  { label: "Fast Food", value: "fast food" },
+  { label: "Alcohol", value: "alcohol" },
+  { label: "Kids Menu", value: "kids menu" },
+  { label: "Sea Food", value: "sea food" },
+  { label: "Desserts", value: "desserts" },
+  { label: "African", value: "african" },
+  { label: "Chinese", value: "chinese" },
+  { label: "Italian", value: "italian" },
+  { label: "Japanese", value: "japanese" },
+  { label: "Indian", value: "indian" },
+  { label: "Thai", value: "thai" },
+  { label: "Middle Eastern", value: "middle eastern" },
+  { label: "BBQ", value: "bbq" },
+  { label: "Coffee", value: "coffee" },
+  { label: "Vegan", value: "vegan" },
+  { label: "Halal", value: "halal" },
+];

@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "seravek";
+  src: url("/SeravekBasic-Regular.woff2") format("woff2"),
+    url("/SeravekBasic-Regular.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-seravek: "seravek", sans-serif;
+  --color-accent: #194128;
+  --color-primary: #f3ae3d;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
