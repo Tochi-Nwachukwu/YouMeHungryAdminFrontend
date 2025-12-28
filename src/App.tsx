@@ -6,6 +6,9 @@ import Login from "./pages/Login";
 import ForgetPassword from "./pages/ForgetPassword";
 import ResetPassword from "./pages/ResetPassword";
 import Onboarding from "./pages/Onboarding";
+import NotFound from "./pages/NotFound";
+import Layout from "./layout/Layout";
+import Notification from "./pages/Notification";
 
 function App() {
   return (
@@ -16,7 +19,11 @@ function App() {
       <Route path="/forgot-password" element={<ForgetPassword />} />
       <Route path="/reset-password" element={<ResetPassword />} />
       <Route path="/onboarding" element={<Onboarding />} />
-      <Route path="/dashboard" element={<Dashboard />} />
+      <Route element={<Layout />}>
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/notifications" element={<Notification />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
     </Routes>
   );
 }
