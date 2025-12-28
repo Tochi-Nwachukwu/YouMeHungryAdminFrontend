@@ -9,6 +9,7 @@ import Onboarding from "./pages/Onboarding";
 import NotFound from "./pages/NotFound";
 import Layout from "./layout/Layout";
 import Notification from "./pages/Notification";
+import Menu from "./pages/Menu";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path="/onboarding" element={<Onboarding />} />
       <Route element={<Layout />}>
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/menu" element={<Menu />} />
         <Route path="/notifications" element={<Notification />} />
         <Route path="*" element={<NotFound />} />
       </Route>

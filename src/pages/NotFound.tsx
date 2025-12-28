@@ -3,7 +3,7 @@ import { HiOutlineExclamationTriangle } from "react-icons/hi2";
 
 export default function NotFound() {
   return (
-    <div className="h-full flex items-center justify-center px-6">
+    <div className="h-175 flex items-center justify-center px-6">
       <div className="text-center max-w-md">
         <div className="mx-auto w-20 h-20 rounded-full bg-accent/10 text-accent flex items-center justify-center text-4xl">
           <HiOutlineExclamationTriangle />
