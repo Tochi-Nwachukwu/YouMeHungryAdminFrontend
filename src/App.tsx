@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound";
 import Layout from "./layout/Layout";
 import Notification from "./pages/Notification";
 import Menu from "./pages/Menu";
+import AddMenu from "./pages/AddMenu";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Route element={<Layout />}>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/menu/add-menu" element={<AddMenu />} />
         <Route path="/notifications" element={<Notification />} />
         <Route path="*" element={<NotFound />} />
       </Route>

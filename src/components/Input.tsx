@@ -7,8 +7,9 @@ import { IoCheckmarkCircle } from "react-icons/io5";
 
 type InputProps = {
   label?: string;
-  name: string;
+  name?: string;
   type?: string;
+  custom?: string;
   placeholder?: string;
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -16,6 +17,7 @@ type InputProps = {
 };
 
 export default function Input({
+  custom = "text-sm font-semibold",
   label,
   name,
   type = "text",
@@ -29,7 +31,7 @@ export default function Input({
       {label && (
         <label
           htmlFor={name}
-          className="block mb-2.5 text-sm leading-5.5 font-seravek font-semibold"
+          className={`block mb-2.5 leading-5.5 font-seravek ${custom}`}
         >
           {label}
         </label>

@@ -8,6 +8,7 @@ interface Option {
 }
 
 interface SelectProps {
+  btn?: boolean;
   name?: string;
   placeholder?: string;
   options: Option[];
@@ -17,12 +18,13 @@ interface SelectProps {
 }
 
 export default function Select({
+  btn,
   name,
   placeholder = "Select option",
   options,
   value,
   onChange,
-  className = "",
+  className = "lg:w-129.5",
 }: SelectProps) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -41,11 +43,11 @@ export default function Select({
   }, []);
 
   return (
-    <div ref={ref} className={`relative lg:w-129.5 w-full ${className}`}>
+    <div ref={ref} className={`relative w-full ${className}`}>
       <button
         type="button"
         onClick={() => setOpen((prev) => !prev)}
-        className="w-full h-13.75 px-4 flex items-center justify-between rounded-[10px] border border-[#CACACA] bg-white text-left cursor-pointer outline-none
+        className="w-full h-13.75 px-4 flex items-center justify-between focus:ring-1 focus:ring-primary rounded-lg border border-[#CACACA] hover:border-primary bg-white text-left cursor-pointer outline-none
         "
       >
         <span className={selectedOption ? "text-black" : "text-[#8E8E8E]"}>
@@ -67,19 +69,28 @@ export default function Select({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="absolute z-50 mt-1 w-full rounded-[10px] border border-[#CACACA] bg-white shadow-lg overflow-hidden"
+            className="absolute z-50 mt-1 py-2 w-full rounded-[10px] border border-[#CACACA] bg-white shadow-lg overflow-hidden"
           >
             {options.map((option) => (
-              <li
+              <div
+                className="flex items-center justify-between pr-5 h-full"
                 key={option.value}
-                onClick={() => {
-                  onChange?.(option.value);
-                  setOpen(false);
-                }}
-                className="px-4 py-3 text-sm cursor-pointer  hover:bg-[#F3AE3D]/40"
               >
-                {option.label}
-              </li>
+                <li
+                  onClick={() => {
+                    onChange?.(option.value);
+                    setOpen(false);
+                  }}
+                  className="px-4 py-3 text-sm"
+                >
+                  {option.label}
+                </li>
+                {btn && (
+                  <button className="grid text-sm h-8 place-items-center rounded-md bg-primary px-[22.5px] font-semibold text-accent transition cursor-pointer">
+                    +Add
+                  </button>
+                )}
+              </div>
             ))}
           </motion.ul>
         )}
