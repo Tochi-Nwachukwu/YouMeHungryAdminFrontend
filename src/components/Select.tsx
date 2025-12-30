@@ -73,7 +73,9 @@ export default function Select({
           >
             {options.map((option) => (
               <div
-                className="flex items-center justify-between pr-5 h-full"
+                className={`${
+                  btn ? "" : "hover:bg-[#ffd49034] cursor-pointer"
+                } flex items-center justify-between pr-5 h-full duration-200 ease-in transition-all`}
                 key={option.value}
               >
                 <li

@@ -40,13 +40,15 @@ export default function TopBar({ onMenuClick }: TopBarProps) {
             McDonalds Restaurant
           </p>
 
-          <div className="lg:w-9.5 w-7 lg:h-9.5 h-7 rounded-full overflow-hidden">
-            <img
-              className="w-full h-full object-cover"
-              src="https://res.cloudinary.com/dadzpobvz/image/upload/v1766762647/ctxasnaiimiwp1hkrttl.png"
-              alt="profile"
-            />
-          </div>
+          <NavLink className="w-fit h-fit rounded-full" to="/profile-settings">
+            <div className="lg:w-9.5 w-7 lg:h-9.5 h-7 rounded-full overflow-hidden">
+              <img
+                className="w-full h-full object-cover"
+                src="https://res.cloudinary.com/dadzpobvz/image/upload/v1766762647/ctxasnaiimiwp1hkrttl.png"
+                alt="profile"
+              />
+            </div>
+          </NavLink>
 
           <button onClick={onMenuClick} className="ml-5 text-2xl lg:hidden">
             <RiMenuLine />

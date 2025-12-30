@@ -6,6 +6,7 @@ interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   title?: string;
+  custom?: string;
   children: ReactNode;
 }
 
@@ -14,6 +15,7 @@ export default function Modal({
   onClose,
   title,
   children,
+  custom = "top-[30%]",
 }: ModalProps) {
   return (
     <AnimatePresence>
@@ -32,10 +34,12 @@ export default function Modal({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="fixed top-[30%] left-1/2 z-50 w-130 max-w-[90%] -translate-x-1/2 -translate-y-1/2 rounded bg-white shadow-xl"
+            className={`fixed ${custom} left-1/2 z-50 w-130 max-w-[90%] -translate-x-1/2 -translate-y-1/2 rounded bg-white shadow-xl`}
           >
             <div className="flex items-center justify-between border-b border-[#E1E1E1] px-6 py-4">
-              <h2 className="text-2xl font-semibold text-black">{title}</h2>
+              <h2 className="lg:text-2xl text-lg font-semibold text-black">
+                {title}
+              </h2>
               <button
                 onClick={onClose}
                 className="text-xl text-black/70 cursor-pointer scale-100 hover:scale-110 duration-200 ease-in transition-all"

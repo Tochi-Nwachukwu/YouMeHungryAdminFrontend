@@ -66,6 +66,7 @@ export function PasswordInput({
   placeholder,
   value,
   onChange,
+  custom = "text-sm font-semibold",
 }: InputProps) {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -74,7 +75,7 @@ export function PasswordInput({
       {label && (
         <label
           htmlFor={name}
-          className="block mb-2.5 text-sm leading-5.5 font-seravek font-semibold"
+          className={`${custom} block mb-2.5 leading-5.5 font-seravek`}
         >
           {label}
         </label>

@@ -4,9 +4,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import logo from "../assets/logo.png";
 import SideBar from "../components/SideBar";
 import TopBar from "../components/TopBar";
+import LogoutModal from "../components/LogoutModal";
 
 export default function Layout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [logoutOpen, setLogoutOpen] = useState(false);
   const location = useLocation();
 
   return (
@@ -28,7 +30,10 @@ export default function Layout() {
         </div>
 
         <div className="mt-7.25 w-[90%]">
-          <SideBar onNavigate={() => setIsSidebarOpen(false)} />
+          <SideBar
+            logout={() => setLogoutOpen(true)}
+            onNavigate={() => setIsSidebarOpen(false)}
+          />
         </div>
       </aside>
 
@@ -56,6 +61,13 @@ export default function Layout() {
           </motion.div>
         </main>
       </AnimatePresence>
+      <LogoutModal
+        open={logoutOpen}
+        onClose={() => setLogoutOpen(false)}
+        onLogout={() => {
+          console.log("Logged out");
+        }}
+      />
     </section>
   );
 }
