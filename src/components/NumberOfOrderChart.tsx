@@ -35,7 +35,7 @@ export default function NumberOfOrdersChart() {
         <div className="relative">
           <button
             onClick={() => setOpen(!open)}
-            className="flex items-center gap-2 text-sm font-medium text-[#6B6B6B] border border-[#E1E1E1] rounded-md px-3 py-1.5 hover:bg-gray-50"
+            className="flex items-center cursor-pointer gap-2 text-sm font-medium text-[#6B6B6B] border border-[#E1E1E1] rounded-md px-3 py-1.5 hover:bg-gray-50"
           >
             {view.charAt(0).toUpperCase() + view.slice(1)}
             <HiChevronDown />
