@@ -2,11 +2,17 @@ import { useRef } from "react";
 
 interface Props {
   imageUrl?: string;
+  custom?: string;
   loading?: boolean;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export default function UploadImage({ imageUrl, loading, onChange }: Props) {
+export default function UploadImage({
+  imageUrl,
+  loading,
+  onChange,
+  custom = "h-66.25 w-97.5",
+}: Props) {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const handleClick = () => {
@@ -20,7 +26,7 @@ export default function UploadImage({ imageUrl, loading, onChange }: Props) {
       <div
         onClick={handleClick}
         className={`${
-          imageUrl ? "h-66.25 w-97.5" : "h-24 w-33"
+          imageUrl ? custom : "h-24 w-33"
         } relative flex  cursor-pointer items-center justify-center rounded border-2 border-dashed border-[#D9D9D9] bg-white overflow-hidden hover:bg-gray-50`}
       >
         {loading && (

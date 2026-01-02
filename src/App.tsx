@@ -17,6 +17,10 @@ import DisputeResolutionDetails from "./pages/DisputeResolutionDetails";
 import Earnings from "./pages/Earnings";
 import VerifyEmail from "./pages/VerifyEmail";
 import ChangeBank from "./pages/ChangeBank";
+import DiscountAndPromos from "./pages/DiscountAndPromos";
+import CreateDicountAndPromo from "./pages/CreateDicountAndPromo";
+import EditDicountAndPromo from "./pages/EditDicountAndPromo";
+import EditMenu from "./pages/EditMenu";
 
 function App() {
   return (
@@ -31,6 +35,16 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/menu/add-menu" element={<AddMenu />} />
+        <Route path="/menu/edit-menu/:id" element={<EditMenu />} />
+        <Route path="/discounts-promos" element={<DiscountAndPromos />} />
+        <Route
+          path="/discounts-promos/create-discount"
+          element={<CreateDicountAndPromo />}
+        />
+        <Route
+          path="/discounts-promos/edit-discount/:id"
+          element={<EditDicountAndPromo />}
+        />
         <Route path="/wallet-earnings" element={<Earnings />} />
         <Route path="/wallet-earnings/verify-email" element={<VerifyEmail />} />
         <Route

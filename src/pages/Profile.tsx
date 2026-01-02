@@ -46,7 +46,7 @@ export default function Profile() {
       </h1>
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 my-5">
         <div className="grid gap-6">
-          <div className="w-full bg-white rounded-[10px] border border-[#E1E1E1] p-3.75">
+          <div className="w-full bg-white rounded-[10px] p-3.75">
             <p className="text-lg font-semibold">Profile Overview</p>
 
             <div className="mt-4.25">
@@ -102,7 +102,7 @@ export default function Profile() {
             </div>
           </div>
 
-          <div className="w-full bg-white rounded-[10px] border border-[#E1E1E1] p-3.75">
+          <div className="w-full bg-white rounded-[10px] p-3.75">
             <p className="text-lg font-semibold">Edit Business Info</p>
             <section className="grid gap-5 my-5">
               <Input
@@ -142,7 +142,7 @@ export default function Profile() {
             </div>
           </div>
 
-          <div className="w-full bg-white rounded-[10px] border border-[#E1E1E1] p-3.75">
+          <div className="w-full bg-white rounded-[10px] p-3.75">
             <p className="text-lg font-semibold">Notifications</p>
             <section className="grid gap-5 my-5">
               <div className="flex items-center w-56.25 justify-between">
@@ -200,7 +200,7 @@ export default function Profile() {
             </section>
           </div>
 
-          <div className="w-full bg-white rounded-[10px] border border-[#E1E1E1] p-3.75">
+          <div className="w-full bg-white rounded-[10px] p-3.75">
             <p className="text-lg font-semibold">Account Deletion</p>
             <div className="flex items-center w-56.25 justify-between mt-6.25">
               <p className="text-lg">Delete Account</p>
@@ -220,7 +220,7 @@ export default function Profile() {
 
         {/* second grid */}
         <div className="grid gap-6">
-          <div className="w-full bg-white rounded-[10px] border border-[#E1E1E1] p-3.75">
+          <div className="w-full bg-white rounded-[10px] p-3.75">
             <p className="text-lg font-semibold">Password & Security</p>
             <section className="grid gap-5 my-5">
               <PasswordInput
@@ -252,7 +252,7 @@ export default function Profile() {
             </div>
           </div>
 
-          <div className="w-full h-fit bg-white rounded-[10px] border border-[#E1E1E1] p-3.75">
+          <div className="w-full h-fit bg-white rounded-[10px] p-3.75">
             <p className="text-lg font-semibold">Edit Bank Account Details</p>
             <section className="grid gap-5 my-5">
               <Input

@@ -206,6 +206,7 @@ export default function Onboarding() {
                   onChange={handleChange}
                 />
                 <MultiSelectInput
+                  modalTitle="Select Cuisine Type"
                   label="Cuisine Type"
                   placeholder="Select Cuisine"
                   options={cuisineTypes}

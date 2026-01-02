@@ -27,7 +27,7 @@ export default function Input({
   icon,
 }: InputProps) {
   return (
-    <div>
+    <div className="w-full">
       {label && (
         <label
           htmlFor={name}
@@ -112,6 +112,8 @@ type Option = {
 
 type MultiSelectInputProps = {
   label?: string;
+  custom?: string;
+  modalTitle?: string;
   placeholder?: string;
   options: Option[];
   value: string[];
@@ -124,6 +126,8 @@ export function MultiSelectInput({
   options,
   value,
   onChange,
+  custom = "font-semibold text-sm",
+  modalTitle,
 }: MultiSelectInputProps) {
   const [open, setOpen] = useState(false);
 
@@ -141,9 +145,9 @@ export function MultiSelectInput({
     .join(", ");
 
   return (
-    <div>
+    <div className="w-full">
       {label && (
-        <label className="block mb-2.5 text-sm leading-5.5 font-seravek font-semibold">
+        <label className={`block mb-2.5 leading-5.5 font-seravek ${custom}`}>
           {label}
         </label>
       )}
@@ -160,9 +164,9 @@ export function MultiSelectInput({
 
       {open && (
         <div className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center">
-          <div className="bg-white w-124.5 rounded-sm pb-7.25">
+          <div className="bg-white lg:w-124.5 w-[90%] rounded-sm pb-7.25">
             <div className="flex items-center justify-between mb-4 border-b border-[#E1E1E1] p-5">
-              <h3 className="font-semibold text-lg">Select Cuisine Type</h3>
+              <h3 className="font-semibold text-lg">{modalTitle}</h3>
               <button className="cursor-pointer" onClick={() => setOpen(false)}>
                 <IoMdClose className="text-xl" />
               </button>

@@ -1,10 +1,12 @@
 import { HiArrowLongDown, HiArrowLongUp } from "react-icons/hi2";
 import type { ReactNode } from "react";
+import { useNavigate } from "react-router-dom";
 
 type Trend = "up" | "down";
 
 interface StatsProps {
   trends?: Trend;
+  link?: string;
   value?: number;
   amount: number | string;
   title: string | ReactNode;
@@ -18,12 +20,22 @@ export default function Stats({
   amount,
   title,
   icon,
+  link,
   custom = "text-[#8C8C8C] font-semibold",
 }: StatsProps) {
   const isUp = trends === "up";
+  const navigate = useNavigate();
 
   return (
-    <div className="w-full h-fit rounded-2xl bg-white p-6">
+    <div
+      role="button"
+      onClick={() => {
+        if (link) navigate(link);
+      }}
+      className={`${
+        link && "cursor-pointer"
+      } w-full h-fit rounded-2xl bg-white p-6`}
+    >
       <div className="flex items-center justify-between">
         <div>
           <p className={`${custom}`}>{title}</p>

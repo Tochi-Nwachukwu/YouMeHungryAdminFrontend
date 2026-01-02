@@ -3,6 +3,8 @@ import Stats from "../components/Stats";
 import { HiCreditCard, HiMiniShoppingBag, HiUserGroup } from "react-icons/hi2";
 import TopSelling from "../components/TopSelling";
 import LatestOrder from "../components/LatestOrder";
+import TotalIncomeChart from "../components/TotalIncomeChart";
+import NumberOfOrdersChart from "../components/NumberOfOrderChart";
 
 export default function Dashboard() {
   return (
@@ -17,6 +19,7 @@ export default function Dashboard() {
           icon={<PiCurrencyDollarSimpleFill />}
           trends="up"
           value={6.5}
+          link="/wallet-earnings"
         />
         <Stats
           title="Income Today"
@@ -24,6 +27,7 @@ export default function Dashboard() {
           icon={<HiCreditCard />}
           trends="down"
           value={2.4}
+          link="/wallet-earnings"
         />
         <Stats
           title="Orders Today"
@@ -42,7 +46,7 @@ export default function Dashboard() {
       </div>
       <div className="flex lg:flex-row flex-col gap-6">
         <div className="flex-1 w-full rounded-2xl bg-white grid place-items-center">
-          ~ Graph here ~
+          <TotalIncomeChart />
         </div>
         <div className="lg:w-69.5 w-full h-82.5 rounded-2xl bg-white p-6">
           <p className="text-[#454545] text-xl font-semibold">
@@ -73,7 +77,7 @@ export default function Dashboard() {
       </div>
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">
         <div className="h-full rounded-2xl bg-white p-6 grid place-items-center">
-          ~ Graph here ~
+          <NumberOfOrdersChart />
         </div>
         <LatestOrder />
       </div>
