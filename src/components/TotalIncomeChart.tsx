@@ -26,7 +26,7 @@ export default function TotalIncomeChart() {
             <button
               key={item}
               onClick={() => setActive(item)}
-              className={`px-3 py-1.5 text-sm font-medium rounded-md transition ${
+              className={`px-3 py-1.5 text-sm font-medium rounded-md transition cursor-pointer ${
                 active === item
                   ? "bg-[#194128] text-white"
                   : "text-[#6B6B6B] hover:bg-white"
