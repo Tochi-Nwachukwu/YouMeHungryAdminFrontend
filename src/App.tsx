@@ -21,6 +21,8 @@ import DiscountAndPromos from "./pages/DiscountAndPromos";
 import CreateDicountAndPromo from "./pages/CreateDicountAndPromo";
 import EditDicountAndPromo from "./pages/EditDicountAndPromo";
 import EditMenu from "./pages/EditMenu";
+import Orders from "./pages/Orders";
+import OrderDetails from "./pages/OrderDetails";
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/menu/add-menu" element={<AddMenu />} />
         <Route path="/menu/edit-menu/:id" element={<EditMenu />} />
+        <Route path="/orders" element={<Orders />} />
+        <Route path="/orders/details/:id" element={<OrderDetails />} />
         <Route path="/discounts-promos" element={<DiscountAndPromos />} />
         <Route
           path="/discounts-promos/create-discount"

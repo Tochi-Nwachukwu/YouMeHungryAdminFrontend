@@ -48,7 +48,7 @@ export default function Dashboard() {
         <div className="flex-1 w-full rounded-2xl bg-white grid place-items-center">
           <TotalIncomeChart />
         </div>
-        <div className="lg:w-69.5 w-full h-82.5 rounded-2xl bg-white p-6">
+        <div className="lg:w-69.5 w-full h-82.5 lg:h-full rounded-2xl bg-white p-6">
           <p className="text-[#454545] text-xl font-semibold">
             Top Selling Item
           </p>

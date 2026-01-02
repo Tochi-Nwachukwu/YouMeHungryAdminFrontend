@@ -32,7 +32,7 @@ export default function Earnings() {
   return (
     <section className="lg:px-6 px-4 py-5 h-full w-full">
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-6.5 mt-5">
-        <div className="h-72.5 rounded-[10px] bg-accent text-white lg:px-9 px-5 flex items-center">
+        <div className="h-72.5 lg:h-full rounded-[10px] bg-accent text-white lg:px-9 px-5 flex items-center">
           <div className="flex lg:flex-row flex-col lg:items-center justify-between gap-11.25 w-full">
             <div>
               <p className="lg:text-[28px] text-xl text-[#E1E1E1]">
