@@ -5,10 +5,10 @@ import { TfiAlert } from "react-icons/tfi";
 interface Props {
   open: boolean;
   onClose: () => void;
-  onLogout: () => void;
+  onDelete: () => void;
 }
 
-export default function DeleteModal({ open, onClose, onLogout }: Props) {
+export default function DeleteModal({ open, onClose, onDelete }: Props) {
   return (
     <AnimatePresence>
       {open && (
@@ -60,10 +60,10 @@ export default function DeleteModal({ open, onClose, onLogout }: Props) {
                 </button>
 
                 <button
-                  onClick={onLogout}
+                  onClick={onDelete}
                   className="h-12 w-40 rounded-lg bg-[#143D25] font-semibold text-white hover:opacity-90 cursor-pointer"
                 >
-                  Log Out
+                  Delete
                 </button>
               </div>
             </div>

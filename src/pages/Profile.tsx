@@ -301,7 +301,7 @@ export default function Profile() {
             return { ...prev, deleteAccount: false };
           })
         }
-        onLogout={() => {
+        onDelete={() => {
           setModal({ deleteAccount: false, confirmDelete: true });
         }}
       />

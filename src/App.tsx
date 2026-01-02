@@ -12,6 +12,8 @@ import Notification from "./pages/Notification";
 import Menu from "./pages/Menu";
 import AddMenu from "./pages/AddMenu";
 import Profile from "./pages/Profile";
+import DisputeResolution from "./pages/DisputeResolution";
+import DisputeResolutionDetails from "./pages/DisputeResolutionDetails";
 
 function App() {
   return (
@@ -26,6 +28,11 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/menu/add-menu" element={<AddMenu />} />
+        <Route path="/dispute-resolution" element={<DisputeResolution />} />
+        <Route
+          path="/dispute-resolution/:id"
+          element={<DisputeResolutionDetails />}
+        />
         <Route path="/profile-settings" element={<Profile />} />
         <Route path="/notifications" element={<Notification />} />
         <Route path="*" element={<NotFound />} />
