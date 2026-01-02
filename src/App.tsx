@@ -14,6 +14,9 @@ import AddMenu from "./pages/AddMenu";
 import Profile from "./pages/Profile";
 import DisputeResolution from "./pages/DisputeResolution";
 import DisputeResolutionDetails from "./pages/DisputeResolutionDetails";
+import Earnings from "./pages/Earnings";
+import VerifyEmail from "./pages/VerifyEmail";
+import ChangeBank from "./pages/ChangeBank";
 
 function App() {
   return (
@@ -28,6 +31,12 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/menu/add-menu" element={<AddMenu />} />
+        <Route path="/wallet-earnings" element={<Earnings />} />
+        <Route path="/wallet-earnings/verify-email" element={<VerifyEmail />} />
+        <Route
+          path="/wallet-earnings/change-account"
+          element={<ChangeBank />}
+        />
         <Route path="/dispute-resolution" element={<DisputeResolution />} />
         <Route
           path="/dispute-resolution/:id"
