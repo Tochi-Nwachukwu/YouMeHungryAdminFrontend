@@ -84,6 +84,62 @@ export const messages: Message[] = [
   },
 ];
 
+export const messagesAdmin: Message[] = [
+  {
+    id: 1,
+    sender: "customer",
+    name: "MacDonald's",
+    message:
+      "Hi, my order was missing the garlic bread that I paid for. Please help.",
+    time: "16:20",
+    avatar:
+      "https://res.cloudinary.com/dadzpobvz/image/upload/v1767613417/bxasgxdyjdena6tcjw6t.png",
+  },
+  {
+    id: 2,
+    sender: "admin",
+    name: "Admin",
+    message:
+      "Hi Kenechukwu, thank you for reaching out. We’re sorry about this issue and will look into it immediately.",
+    time: "16:21",
+  },
+  {
+    id: 3,
+    sender: "customer",
+    name: "MacDonald's",
+    message: "Thank you. Please let me know once you’ve checked.",
+    time: "16:22",
+    avatar:
+      "https://res.cloudinary.com/dadzpobvz/image/upload/v1767613417/bxasgxdyjdena6tcjw6t.png",
+  },
+  {
+    id: 4,
+    sender: "admin",
+    name: "Admin",
+    message:
+      "We’ve reviewed your order and confirmed that the garlic bread was not included due to a temporary stockout. We sincerely apologize for the inconvenience caused.",
+    time: "16:24",
+  },
+  {
+    id: 5,
+    sender: "admin",
+    name: "McDonalds",
+    message:
+      "Would you prefer a refund for the missing item, or would you like us to send a replacement with your next order?",
+    time: "16:26",
+  },
+  {
+    id: 6,
+    sender: "customer",
+    name: "MacDonald's",
+    message:
+      "Please go ahead and issue a refund. Thank you for the quick response.",
+    time: "16:27",
+    avatar:
+      "https://res.cloudinary.com/dadzpobvz/image/upload/v1767613417/bxasgxdyjdena6tcjw6t.png",
+  },
+];
+
 export const chartData = {
   Daily: [
     { label: "Mon", value: 12000 },

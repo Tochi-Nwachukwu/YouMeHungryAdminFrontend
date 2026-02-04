@@ -57,7 +57,7 @@ export default function ChatBox({
                 >
                   <p className="font-semibold mb-1">
                     {msg.sender === "admin"
-                      ? `${msg.name} (You)`
+                      ? `${msg.name}`
                       : `${msg.name}: Customer`}
                   </p>
                   <p>{msg.message}</p>

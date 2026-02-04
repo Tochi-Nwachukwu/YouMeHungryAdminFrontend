@@ -23,6 +23,15 @@ import EditDicountAndPromo from "./pages/EditDicountAndPromo";
 import EditMenu from "./pages/EditMenu";
 import Orders from "./pages/Orders";
 import OrderDetails from "./pages/OrderDetails";
+import StaffManagement from "./pages/StaffManagement";
+import AddStaff from "./pages/AddStaff";
+import Users from "./pages/Users";
+import Restaurant from "./pages/Restaurant";
+import RestaurantOrderHistory from "./pages/RestaurantOrderHistory";
+import RestaurantTransactionHistory from "./pages/RestaurantTransactionHistory";
+import RestaurantReviews from "./pages/RestaurantReviews";
+import RestaurantMessage from "./pages/RestaurantMessage";
+import Contents from "./pages/Contents";
 
 function App() {
   return (
@@ -35,6 +44,32 @@ function App() {
       <Route path="/onboarding" element={<Onboarding />} />
       <Route element={<Layout />}>
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/restaurants" element={<Restaurant />} />
+        <Route
+          path="/restaurants/:id/order-history"
+          element={<RestaurantOrderHistory />}
+        />
+        <Route
+          path="/restaurants/:id/transaction-history"
+          element={<RestaurantTransactionHistory />}
+        />
+        <Route
+          path="/restaurants/:id/reviews"
+          element={<RestaurantReviews />}
+        />
+        <Route
+          path="/restaurants/:id/message"
+          element={<RestaurantMessage />}
+        />
+        <Route path="/contents" element={<Contents />} />
+        <Route path="/staff-management" element={<StaffManagement />} />
+        <Route path="/staff-management/add-staff" element={<AddStaff />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/profile-settings" element={<Profile />} />
+        <Route path="/notifications" element={<Notification />} />
+        <Route path="*" element={<NotFound />} />
+
+        {/* confirm routes */}
         <Route path="/menu" element={<Menu />} />
         <Route path="/menu/add-menu" element={<AddMenu />} />
         <Route path="/menu/edit-menu/:id" element={<EditMenu />} />
@@ -60,9 +95,6 @@ function App() {
           path="/dispute-resolution/:id"
           element={<DisputeResolutionDetails />}
         />
-        <Route path="/profile-settings" element={<Profile />} />
-        <Route path="/notifications" element={<Notification />} />
-        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );

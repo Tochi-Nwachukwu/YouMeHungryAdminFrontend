@@ -38,7 +38,7 @@ export default function TotalIncomeChart() {
         </div>
       </div>
 
-      <div className="h-65">
+      <div className="h-82.5">
         <AnimatePresence mode="wait">
           <motion.div
             key={active}

@@ -34,7 +34,7 @@ export default function Modal({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className={`fixed ${custom} left-1/2 z-50 w-130 max-w-[90%] -translate-x-1/2 -translate-y-1/2 rounded bg-white shadow-xl`}
+            className={`fixed ${custom} left-1/2 z-50 min-w-130 max-w-[90%] -translate-x-1/2 -translate-y-1/2 rounded bg-white shadow-xl`}
           >
             <div className="flex items-center justify-between border-b border-[#E1E1E1] px-6 py-4">
               <h2 className="lg:text-2xl text-lg font-semibold text-black">

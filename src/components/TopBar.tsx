@@ -22,6 +22,9 @@ export default function TopBar({ onMenuClick }: TopBarProps) {
       </div>
 
       <div className="flex items-center lg:gap-5 gap-6">
+        <button className="bg-primary text-accent px-10 py-1.75 font-semibold text-sm rounded-lg cursor-pointer mr-11 hidden lg:block">
+          Messages
+        </button>
         <NavLink to="/notifications">
           <div className="lg:w-9.5 w-7 lg:h-9.5 h-7 relative">
             <img

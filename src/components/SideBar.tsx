@@ -1,11 +1,15 @@
 import { NavLink } from "react-router-dom";
 import dashboard from "../assets/dashboard.png";
-import menu from "../assets/menu.png";
-import orders from "../assets/orders.png";
 import discount from "../assets/discount.png";
 import wallet from "../assets/wallet.png";
 import dispute from "../assets/dispute.png";
 import setting from "../assets/setting.png";
+import contents from "../assets/contents.png";
+import drivers from "../assets/drivers.png";
+import fulfilment from "../assets/fulfilment.png";
+import users from "../assets/users.png";
+import staffs from "../assets/staffs.png";
+import restaurants from "../assets/restaurants.png";
 import logoutIcon from "../assets/logout.png";
 
 interface SideBarProps {
@@ -23,36 +27,61 @@ export default function SideBar({ onNavigate, logout }: SideBarProps) {
     },
     {
       id: 1,
-      name: "menu",
-      link: "/menu",
-      icon: menu,
+      name: "restaurants",
+      link: "/restaurants",
+      icon: restaurants,
     },
     {
       id: 2,
-      name: "orders",
-      link: "/orders",
-      icon: orders,
+      name: "drivers",
+      link: "/drivers",
+      icon: drivers,
     },
     {
       id: 3,
+      name: "Contents",
+      link: "/contents",
+      icon: contents,
+    },
+    {
+      id: 4,
+      name: "Orders Fulfilment",
+      link: "/orders-fulfilment",
+      icon: fulfilment,
+    },
+    {
+      id: 5,
       name: "discounts & promos",
       link: "/discounts-promos",
       icon: discount,
     },
     {
-      id: 4,
+      id: 6,
       name: "wallet & earnings",
       link: "/wallet-earnings",
       icon: wallet,
     },
     {
-      id: 5,
+      id: 7,
       name: "dispute resolution",
       link: "/dispute-resolution",
       icon: dispute,
     },
     {
-      id: 6,
+      id: 8,
+      name: "users",
+      link: "/users",
+      icon: users,
+    },
+    {
+      id: 9,
+      name: "Staff Management",
+      link: "/staff-management",
+      icon: staffs,
+    },
+
+    {
+      id: 11,
       name: "profile & settings",
       link: "/profile-settings",
       icon: setting,
@@ -61,14 +90,14 @@ export default function SideBar({ onNavigate, logout }: SideBarProps) {
 
   return (
     <div>
-      <div className="w-full grid gap-3.75">
-        {links.slice(0, 6).map((link) => (
+      <div className="w-full grid gap-2.5">
+        {links.slice(0, 10).map((link) => (
           <NavLink
             key={link.id}
             to={link.link}
             onClick={onNavigate}
             className={({ isActive }) =>
-              `flex items-center gap-2 rounded-r-lg capitalize py-1.75 px-5 h-13.25 relative w-full cursor-pointer
+              `flex items-center gap-2 rounded-r-lg capitalize px-5 py-3 relative w-full cursor-pointer
             hover:bg-[#f3ad3d31]
             ${isActive ? "bg-[#f3ad3d59] font-semibold" : ""}`
             }
@@ -93,15 +122,15 @@ export default function SideBar({ onNavigate, logout }: SideBarProps) {
           </NavLink>
         ))}
       </div>
-      <div className="w-full grid gap-3.75 mt-15.5">
+      <div className="w-full grid gap-2.5 mt-9">
         <p className="px-6 text-sm text-primary font-semibold">Other Menu</p>
-        {links.slice(6, 7).map((link) => (
+        {links.slice(10).map((link) => (
           <NavLink
             key={link.id}
             to={link.link}
             onClick={onNavigate}
             className={({ isActive }) =>
-              `flex items-center gap-2 rounded-r-lg capitalize py-1.75 px-5 h-13.25 relative w-full cursor-pointer hover:bg-[#f3ad3d31] ${
+              `flex items-center gap-2 rounded-r-lg capitalize px-5 py-3 relative w-full cursor-pointer hover:bg-[#f3ad3d31] ${
                 isActive ? "bg-[#f3ad3d59] font-semibold" : ""
               }`
             }
@@ -127,7 +156,7 @@ export default function SideBar({ onNavigate, logout }: SideBarProps) {
         ))}
         <button
           onClick={logout}
-          className="flex items-center gap-2 rounded-r-lg capitalize py-1.75 px-5 h-13.25 relative w-full cursor-pointer hover:bg-[#f3ad3d31]"
+          className="flex items-center gap-2 rounded-r-lg capitalize px-5 py-3 relative w-full cursor-pointer hover:bg-[#f3ad3d31]"
         >
           <div className="w-5 h-5">
             <img

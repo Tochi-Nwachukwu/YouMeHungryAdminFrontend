@@ -29,7 +29,7 @@ export default function Layout() {
           </div>
         </div>
 
-        <div className="mt-7.25 w-[90%]">
+        <div className="mt-3 w-[90%]">
           <SideBar
             logout={() => setLogoutOpen(true)}
             onNavigate={() => setIsSidebarOpen(false)}
