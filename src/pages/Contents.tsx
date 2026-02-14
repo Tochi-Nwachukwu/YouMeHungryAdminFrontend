@@ -1,4 +1,4 @@
-import { MdChevronRight, MdDeleteOutline, MdOutlineEdit } from "react-icons/md";
+import { MdChevronRight } from "react-icons/md";
 import GoBack from "../components/GoBack";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -14,8 +14,6 @@ export default function Contents() {
 
   const filters = ["Active", "Inactive"];
 
-  // const category = ["Earnings", "Withdrawals"];
-
   return (
     <section className="lg:px-6 px-4 py-5 h-full w-full">
       <div className="flex items-center justify-between">
@@ -26,10 +24,10 @@ export default function Contents() {
           </h1>
         </div>
         <button
-          onClick={() => navigate(`/discounts-promos/create-discount`)}
+          onClick={() => navigate(`/contents/new`)}
           className="px-6 py-2 rounded font-semibold text-white bg-accent w-fit cursor-pointer hidden lg:block"
         >
-          + Create New Discount
+          + Create New Banner
         </button>
       </div>
 
@@ -84,21 +82,20 @@ export default function Contents() {
             </div>
             {/* table */}
             <section>
-              <div className="grid lg:grid-cols-[0.3fr_0.5fr_1.5fr_1fr_1fr_1fr_0.5fr_0.3fr_0.3fr] grid-cols-[1fr_0.5fr_0.5fr] text-sm text-[#8E8E8E] px-5 lg:mr-5">
+              <div className="grid lg:grid-cols-[0.3fr_0.5fr_1.5fr_1fr_1fr_1fr_0.3fr] grid-cols-[1fr_0.5fr_0.5fr] text-sm text-[#8E8E8E] px-5 lg:mr-5">
                 <p className="hidden lg:block ">Id</p>
                 <p className="">Banner</p>
                 <p className="hidden lg:block ">Title</p>
                 <p className="">Start Date</p>
                 <p className="hidden lg:block ">End Date</p>
                 <p className="">Status</p>
-                <p className="">Actions</p>
               </div>
               <div className="grid gap-4 mt-3 h-180 overflow-y-scroll mr-2 custom-scrollbar">
                 {Array.from({ length: 40 }, (_, i) => (
                   <div
                     role="button"
                     key={i}
-                    className="grid lg:grid-cols-[0.3fr_0.5fr_1.5fr_1fr_1fr_1fr_0.5fr_0.3fr_0.3fr] grid-cols-[1fr_0.5fr_0.5fr] lg:text-base text-xs bg-[#FAFAFA] rounded items-center py-2.5 px-5"
+                    className="grid lg:grid-cols-[0.3fr_0.5fr_1.5fr_1fr_1fr_1fr_0.3fr] grid-cols-[1fr_0.5fr_0.5fr] lg:text-base text-xs bg-[#FAFAFA] rounded items-center py-2.5 px-5"
                   >
                     <p className="hidden lg:block ">{1 + i}</p>
                     <div>
@@ -113,24 +110,9 @@ export default function Contents() {
                     <p className="hidden lg:block ">20% Off on All Orders!</p>
                     <p className="">19/05/2025</p>
                     <p className="hidden lg:block ">19/05/2025</p>
-                    <div className=" bg-[#34A853]/15 text-[#34A853] w-fit py-1.5 lg:px-4.75 px-2 rounded">
-                      <p>Successful</p>
+                    <div className=" bg-[#34A853]/15 text-[#34A853] w-fit py-1.5 lg:px-10.75 px-2 rounded">
+                      <p>Active</p>
                     </div>
-                    <button
-                      onClick={() =>
-                        navigate(
-                          `/discounts-promos/edit-discount/${i + Math.random()}`
-                        )
-                      }
-                      className="text-left flex items-center gap-1.75 cursor-pointer"
-                    >
-                      <p>Edit</p>
-                      <MdOutlineEdit color="#F3AE3D" size={20} />
-                    </button>
-                    <button className="text-left flex items-center gap-1.75 cursor-pointer">
-                      <p>Delete</p>
-                      <MdDeleteOutline color="#CF3636" size={20} />
-                    </button>
                     <BsThreeDotsVertical className="hidden lg:block" />
                   </div>
                 ))}

@@ -1,5 +1,4 @@
 import { MdChevronRight, MdDeleteOutline, MdOutlineEdit } from "react-icons/md";
-import GoBack from "../components/GoBack";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsThreeDotsVertical } from "react-icons/bs";
@@ -25,7 +24,6 @@ export default function DiscountAndPromos() {
     <section className="lg:px-6 px-4 py-5 h-full w-full">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-8.5">
-          <GoBack />
           <h1 className="lg:text-[30px] text-2xl text-black font-bold leading-[100%]">
             Discounts & Promos
           </h1>
@@ -125,7 +123,7 @@ export default function DiscountAndPromos() {
                     <button
                       onClick={() =>
                         navigate(
-                          `/discounts-promos/edit-discount/${i + Math.random()}`
+                          `/discounts-promos/edit-discount/${i + Math.random()}`,
                         )
                       }
                       className="text-left flex items-center gap-1.75 cursor-pointer"
